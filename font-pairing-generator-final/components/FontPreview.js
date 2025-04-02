@@ -2,7 +2,16 @@ import { useState, useEffect } from "react"
 import WebFont from "webfontloader"
 
 // 👉 Nutze deine vorhandene Fontliste
-const googleFonts = [/* deine Fontliste hier */]
+const googleFonts = [const googleFonts = [
+  "Roboto", "Open Sans", "Lato", "Montserrat", "Raleway", "Merriweather", "Playfair Display",
+  "Poppins", "Ubuntu", "Source Sans Pro", "Oswald", "Noto Sans", "Noto Serif", "PT Sans",
+  "PT Serif", "Rubik", "Inter", "Fira Sans", "Karla", "Work Sans", "Quicksand", "Bebas Neue",
+  "Archivo", "Cabin", "DM Sans", "Mukta", "Nunito", "Crimson Pro", "Titillium Web", "Zilla Slab",
+  "Assistant", "Heebo", "Tajawal", "Cairo", "Barlow", "Manrope", "Space Grotesk", "Syne",
+  "Lexend", "Raleway Dots", "Inconsolata", "Anton", "Orbitron", "Abel", "Bitter", "Caveat",
+  "Dancing Script", "Muli", "Varela Round", "Josefin Sans", "Cormorant Garamond", "Lora",
+  "Play", "Prompt", "Signika", "Teko", "Urbanist", "Yeseva One", "Zeyada", "Kanit", "Jost"
+]]
 
 export default function FontPreview() {
   const [headingFont, setHeadingFont] = useState("Playfair Display")
@@ -29,7 +38,7 @@ export default function FontPreview() {
         🎨 Font Pairing Generator
       </h1>
 
-      <label style={{ fontWeight: "bold" }}>Beispieltext</label>
+      <label style={{ fontWeight: "bold" }}>example text</label>
       <input
         type="text"
         value={text}
@@ -46,7 +55,7 @@ export default function FontPreview() {
 
       <div style={{ display: "flex", gap: "1rem", marginBottom: "1.5rem" }}>
         <div style={{ flex: 1 }}>
-          <label style={{ fontWeight: "bold" }}>Überschrift-Font</label>
+          <label style={{ fontWeight: "bold" }}>Heading-font</label>
           <select
             value={headingFont}
             onChange={(e) => setHeadingFont(e.target.value)}
@@ -63,7 +72,7 @@ export default function FontPreview() {
           </select>
         </div>
         <div style={{ flex: 1 }}>
-          <label style={{ fontWeight: "bold" }}>Fließtext-Font</label>
+          <label style={{ fontWeight: "bold" }}>Body-font</label>
           <select
             value={bodyFont}
             onChange={(e) => setBodyFont(e.target.value)}
