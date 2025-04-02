@@ -1,9 +1,9 @@
-import dynamic from "next/dynamic";
-import Head from "next/head";
+import dynamic from "next/dynamic"
+import Head from "next/head"
 
 const FontPreview = dynamic(() => import("../components/FontPreview"), {
   ssr: false,
-});
+})
 
 export default function Home() {
   return (
@@ -13,5 +13,5 @@ export default function Home() {
       </Head>
       <FontPreview />
     </>
-  );
+  )
 }
