@@ -3,17 +3,9 @@ import Head from "next/head"
 import WebFont from "webfontloader"
 
 const googleFonts = [
-  "Roboto",
-  "Open Sans",
-  "Lato",
-  "Montserrat",
-  "Raleway",
-  "Merriweather",
-  "Playfair Display",
-  "Poppins",
-  "Ubuntu",
-  "Source Sans Pro",
-  "Oswald"
+  "Roboto", "Open Sans", "Lato", "Montserrat", "Raleway",
+  "Merriweather", "Playfair Display", "Poppins",
+  "Ubuntu", "Source Sans Pro", "Oswald"
 ]
 
 export default function Home() {
