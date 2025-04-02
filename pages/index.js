@@ -1,18 +1,26 @@
-import { useState, useEffect } from "react"
-import Head from "next/head"
-import WebFont from "webfontloader"
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import WebFont from "webfontloader";
 
 const googleFonts = [
-  "Roboto", "Open Sans", "Lato", "Montserrat", "Raleway",
-  "Merriweather", "Playfair Display", "Poppins",
-  "Ubuntu", "Source Sans Pro", "Oswald"
-]
+  "Roboto",
+  "Open Sans",
+  "Lato",
+  "Montserrat",
+  "Raleway",
+  "Merriweather",
+  "Playfair Display",
+  "Poppins",
+  "Ubuntu",
+  "Source Sans Pro",
+  "Oswald",
+];
 
 export default function Home() {
-  const [headingFont, setHeadingFont] = useState("Roboto")
-  const [bodyFont, setBodyFont] = useState("Open Sans")
-  const [text, setText] = useState("Lorem ipsum dolor sit amet.")
-  const [generated, setGenerated] = useState(false)
+  const [headingFont, setHeadingFont] = useState("Roboto");
+  const [bodyFont, setBodyFont] = useState("Open Sans");
+  const [text, setText] = useState("Lorem ipsum dolor sit amet.");
+  const [generated, setGenerated] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -20,10 +28,9 @@ export default function Home() {
         google: {
           families: [headingFont, bodyFont],
         },
-      })
+      });
     }
-  }, [headingFont, bodyFont, generated])
-  
+  }, [headingFont, bodyFont, generated]);
 
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
@@ -37,7 +44,9 @@ export default function Home() {
           <label>Heading Font</label>
           <select value={headingFont} onChange={(e) => setHeadingFont(e.target.value)}>
             {googleFonts.map((font) => (
-              <option key={font} value={font}>{font}</option>
+              <option key={font} value={font}>
+                {font}
+              </option>
             ))}
           </select>
         </div>
@@ -45,7 +54,9 @@ export default function Home() {
           <label>Body Font</label>
           <select value={bodyFont} onChange={(e) => setBodyFont(e.target.value)}>
             {googleFonts.map((font) => (
-              <option key={font} value={font}>{font}</option>
+              <option key={font} value={font}>
+                {font}
+              </option>
             ))}
           </select>
         </div>
@@ -76,5 +87,5 @@ export default function Home() {
         </div>
       )}
     </div>
-  )
+  );
 }
