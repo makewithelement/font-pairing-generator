@@ -15,12 +15,15 @@ export default function Home() {
   const [generated, setGenerated] = useState(false)
 
   useEffect(() => {
-    WebFont.load({
-      google: {
-        families: [headingFont, bodyFont],
-      },
-    })
+    if (typeof window !== "undefined") {
+      WebFont.load({
+        google: {
+          families: [headingFont, bodyFont],
+        },
+      })
+    }
   }, [headingFont, bodyFont, generated])
+  
 
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
