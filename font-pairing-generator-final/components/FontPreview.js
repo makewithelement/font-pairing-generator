@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import WebFont from "webfontloader"
 
 // 👉 Nutze deine vorhandene Fontliste
-const googleFonts = [const googleFonts = [
+const googleFonts = [
   "Roboto", "Open Sans", "Lato", "Montserrat", "Raleway", "Merriweather", "Playfair Display",
   "Poppins", "Ubuntu", "Source Sans Pro", "Oswald", "Noto Sans", "Noto Serif", "PT Sans",
   "PT Serif", "Rubik", "Inter", "Fira Sans", "Karla", "Work Sans", "Quicksand", "Bebas Neue",
